@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Download GX PLAYER</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: rgb(0, 0, 0);
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    #stars {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 2px;
+      background: rgb(0, 119, 255);
+      z-index: 0;
+    }
+
+    .main {
+      position: relative;
+      z-index: 1;
+      width: 800px;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 50px;
+      background-color: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding: 40px 40px;
+      text-align: center;
+    }
+
+    .h1 {
+      font-size: 35px;
+      margin: 0 0 30px;
+      font-family: 'Poppins', sans-serif;
+      color: black;
+    }
+
+    .p1, li {
+      font-size: 18px;
+      color: black;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .p1 {
+      margin: 20px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    li {
+      margin: 5px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .info-bottom {
+      font-size: 15px;
+      color: black;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      font-family: 'Poppins', sans-serif;
+      gap: 35px;
+    }
+
+    .button1 {
+      background-color: black;
+      width: 320px;
+      color: white;
+      border: none;
+      text-decoration: none;
+      padding: 15px 30px;
+      text-align: center;
+      margin-top: 35px;
+      font-size: 20px;
+      border-radius: 60px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .button1:hover {
+      background-color: #878787;
+      transition: background-color 0.5s ease;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main {
+        width: 90vw;
+        padding: 20px;
+      }
+
+      li {
+        font-size: 18px;
+        text-align: left;
+      }
+
+      .btn-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .button1 {
+        width: 90%;
+        max-width: 300px;
+        font-size: 18px;
+        padding: 14px 20px;
+        margin: 0 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="stars"></div>
+
+  <div class="main">
+    <h1 class="h1">Download GX Player</h1>
+    <hr />
+    <p class="p1"><b>Features of the App:</b></p>
+    <li>View Dashcam recordings straight from the SD Card</li>
+    <li>View and Download locked videos from the dashcam</li>
+    <li>Get GPS Location of the recordings and more</li>
+
+    <div class="btn-container"> 
+      <a href="GXPlayer.msi" download>
+        <button class="button1">Download for Windows</button>
+      </a>
+    </div>
+
+    <p class="info-bottom">ℹ️ Info: This program only supports Windows Operating System at the moment running x32 or x64</p>
+  </div>
+
+  <!-- Starfield generator script -->
+  <script>
+    const starCount = 350;
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+
+    const stars = [];
+    for (let i = 0; i < starCount; i++) {
+      const x = Math.floor(Math.random() * screenWidth);
+      const y = Math.floor(Math.random() * screenHeight);
+      stars.push(`${x}px ${y}px white`);
+    }
+
+    const starsDiv = document.getElementById('stars');
+    starsDiv.style.boxShadow = stars.join(', ');
+  </script>
+</body>
+</html>
